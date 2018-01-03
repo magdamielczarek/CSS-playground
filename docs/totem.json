@@ -1,0 +1,62 @@
+{"animals": [
+  {
+  "name": "hare",
+  "character_positive": "fast",
+  "character_negative": "wary"
+  },
+  {
+  "name": "bear",
+  "character_positive": "strong",
+  "character_negative": "lazy"
+  },
+  {
+  "name": "beaver",
+  "character_positive": "agile",
+  "character_negative": "cowardly"
+  },
+  {
+  "name": "boar",
+  "character_positive": "valorous",
+  "character_negative": "greedy"
+  },
+    {
+  "name": "deer",
+  "character_positive": "calm",
+  "character_negative": "tame"
+  },
+  {
+  "name": "fox",
+  "character_positive": "smart",
+  "character_negative": "wayward"
+  },
+  {
+  "name": "hedgehog",
+  "character_positive": "hard-working",
+  "character_negative": "clumsy"
+  },
+  {
+  "name": "lynx",
+  "character_positive": "concentrated",
+  "character_negative": "beastly"
+  },
+    {
+  "name": "owl",
+  "character_positive": "wise",
+  "character_negative": "snooty"
+  },
+  {
+  "name": "racoon",
+  "character_positive": "cheerful",
+  "character_negative": "mingy"
+  },
+  {
+  "name": "squirrel",
+  "character_positive": "far-sighted",
+  "character_negative": "intrusive"
+  },
+  {
+  "name": "wolf",
+  "character_positive": "tough",
+  "character_negative": "reliant"
+  }
+]}
