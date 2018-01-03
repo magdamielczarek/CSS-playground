@@ -1,0 +1,29 @@
+
+@media screen and (max-width: 440px) {
+	
+	#totem {
+		.totem-wrapper {
+			margin-right: 15px;
+		}
+		.description {
+			width: 135px;
+			margin-left: 0;
+			>span {
+				width: 110px;
+				font-size: 11px;
+			}
+		}
+		.buttons {
+			margin-right: 5px; 
+			button {
+				width: 30px;
+				height: 30px;
+			}
+		}
+		.adjective {
+			font-weight: normal;
+			color: red;
+		}
+	}
+
+}

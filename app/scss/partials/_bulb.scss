@@ -1,0 +1,82 @@
+
+@keyframes switchon {
+
+	0% {
+		fill: #101628;
+	}
+	50% {
+		fill: #FAC231;
+		box-shadow: 0 0 3px 4px #FAC231;
+	}
+	60% {
+		fill: #101628;
+	}
+	80% {
+		fill: #FAC231;
+	}
+	83% {
+		fill: #FAC231;
+	}
+	100% {
+		fill: #FAC231;
+	}
+}
+
+@keyframes bulb {
+	100% {stroke-dasharray: 1100; stroke-dashoffset: 0;}
+}
+
+#bulb {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #101628;
+	.wrapper {
+		width: 70%;
+	}
+
+
+	.base,
+	.content,
+	.radius,
+	.frame,
+	.blink  {
+		box-shadow: 2px 2px 1px #FFF;
+		stroke: #FAC231;
+		stroke-width: 5px;
+		stroke-dasharray: 1550;
+		stroke-dashoffset: 1550;
+		fill: lighten(#101628, 10%);
+	}
+
+	.base {
+		animation: bulb 3s forwards, switchon 3s 2s forwards;
+	}
+
+	.content {
+		animation: bulb 3s forwards, switchon 3s 2s forwards;
+	}
+	.frame  {
+		animation: switchon 3s 4s forwards;
+	}
+	g .radius:first-of-type {
+		animation: switchon 3s 5s forwards;
+	}
+	g .radius:nth-of-type(2) {
+		animation: switchon 3s 6s forwards;
+	}
+	g .radius:nth-of-type(3) {
+		animation: switchon 3s 8s forwards;
+	}
+	g .radius:nth-of-type(4) {
+		animation: switchon 3s 7s forwards;
+	}
+	g .radius:nth-of-type(5) {
+		animation: switchon 3s 9s forwards;
+	}
+	.blink {
+		animation: bulb 3s 9s forwards;
+	}
+
+}

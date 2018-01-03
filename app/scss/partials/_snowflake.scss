@@ -1,0 +1,116 @@
+@keyframes base_animation {
+	100% {width: 290px}
+}
+
+@keyframes cross {
+	100% {opacity: 1;}
+}
+
+//@keyframes rotation {
+//	100% {transform: rotate(360deg);}
+//}
+
+#snowflake {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #0782BE;
+	.container {
+		width: 290px;
+		height: 280px;
+		position: relative;
+		//animation: rotation 1s 4s forwards;
+	}
+	.overlay {
+		width: 140%;
+		height: 140%;
+		position: absolute;
+		background-image: radial-gradient(#FFF, transparent);
+		opacity: 0;
+		animation: cross 1s 4s forwards;
+	}
+	.base-vertical,
+	.base-horizontal {
+		width: 0;
+		height: 5px;
+		background-color: #FFF;
+		border-radius: 10px;
+		animation: base_animation 2s 1s 1 forwards;
+	}
+	.base-vertical {
+		position: relative;
+		border-radius: 10px;
+		transform: rotate(90deg);
+	}
+	.base-horizontal {
+		position: absolute;
+		transform: rotate(30deg);
+		&:last-child {
+			transform: rotate(-30deg);
+		}
+	}
+	.cross-bigger-1,
+	.cross-bigger-2,
+	.cross-smaller-1,
+	.cross-smaller-2,
+	.cross-smallest-1,
+	.cross-smallest-2 {
+		width: 45px;
+		height: 39px;
+		position: absolute;
+		bottom: -19.5px;
+		border-right: 5px solid #FFF;
+		border-top: 5px solid #FFF;
+		transform-origin: 50% 50%;
+		opacity: 0;
+	}
+	.cross-bigger-1 {
+		left: 50px;
+		transform: rotate(60deg) skewX(30deg);
+		animation: cross 2s 3s 1 forwards;
+	}
+	.cross-bigger-2 {
+		right: 50px;
+		transform: rotate(240deg) skewX(30deg);
+		animation: cross 2s 3s 1 forwards;
+	}
+	.cross-smaller-1 {
+		left: 30px;
+		transform: rotate(60deg) skewX(30deg);
+		animation: cross 2s 4s 1 forwards;
+	}
+	.cross-smaller-2 {
+		right: 30px;
+		transform: rotate(240deg) skewX(30deg);
+		animation: cross 2s 4s 1 forwards;
+	}
+	.cross-smallest-1 {
+		left: 10px;
+		transform: rotate(60deg) skewX(30deg);
+		animation: cross 2s 4s 1 forwards;
+	}
+	.cross-smallest-2 {
+		right: 10px;
+		transform: rotate(240deg) skewX(30deg);
+		animation: cross 2s 4s 1 forwards;
+	}
+	.point-1,
+	.point-2 {
+		width: 20px;
+		height: 18px;
+		position: absolute;
+		bottom: -8.5px;
+		border-right: 5px solid #FFF;
+		border-top: 5px solid #FFF;
+		transform-origin: 50% 50%;
+	}
+	.point-1 {
+		right: 98%;
+		transform: rotate(60deg) skewX(30deg);
+	}
+	.point-2 {
+		left: 98%;
+		transform: rotate(240deg) skewX(30deg);
+	}
+}

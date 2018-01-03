@@ -1,0 +1,43 @@
+
+#cutout {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #018F98;
+	.cutout-wrapper {
+		width: 250px;
+		height: 250px;
+		position: relative;
+	}
+	.triangle {
+		width: 125px;
+		height: 125px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		background-color: #EAB000;
+		clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+		//clip-path: polygon(0% 90%, 100% 10%, 0% 100%);
+		&:nth-of-type(7) {
+			//transform: rotate(180deg);
+		}
+		&:nth-of-type(6) {
+			//transform: rotate(180deg);
+		}
+		&:nth-of-type(5) {
+			//transform: rotate(180deg);
+		}
+		&:nth-of-type(4) {
+			//transform: rotate(180deg);
+		}
+		&:nth-of-type(3) {
+			//transform: rotate(180deg);
+		}
+		&:nth-of-type(2) {
+			//transform: rotate(180deg);
+		}
+		&:first-of-type {
+			//transform: rotate(180deg);
+		}
+	}
+}

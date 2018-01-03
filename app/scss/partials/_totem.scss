@@ -1,0 +1,125 @@
+
+#totem {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: center;
+	color: #FFF;
+	font-size: 14px;
+	font-family: 'Pantano-Sans', sans-serif;
+	background-color: #926290;
+	header {
+		text-align: center;
+	}
+	h2 {
+		margin: 5px;
+		font-weight: normal; 
+	}
+	.description {
+		width: 160px;
+		height: 300px;
+		margin: 0 0 20px 15px;
+		position: relative;
+		align-self: flex-start;
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: center;
+		justify-content: center;
+		>span {
+			width: 150px;
+			margin: 15px 0;
+			padding: 5px;
+			font-size: 16px;
+			color: lighten(#926290, 30%);
+			text-align: center;
+			border: 1px solid #FFF;
+			border-radius: 6px;
+		}
+		.adjective {
+			color: #FFF; 
+			font-weight: bold;
+			letter-spacing: 3px;
+		}
+		button {
+			//padding: 4px;
+			position: absolute;
+			bottom: 0;
+			color: #FFF;
+			background-color: darken(#926290,20%);
+			border: 2px solid #FFF;
+			border-radius: 5px;
+			cursor: pointer;
+			&:hover {
+				background-color: complement(#926290);
+			}
+		}
+	}
+	.buttons {
+		height: 300px;
+		margin: 0 15px;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: space-around;
+		button {
+			width: 40px;
+			height: 40px;
+			border: none;
+			background: {
+				image: url('../images/totem/rotate-to-right.svg');
+				color: transparent;
+				size: 85%;
+				position: center center;
+				repeat: no-repeat;
+			}
+			cursor: pointer;
+		}
+	}
+	.totem-wrapper {
+		width: 25%;
+		transform-style: preserve-3d;
+		-webkit-perspective: 600px;
+		perspective: 600px;
+		-webkit-perspective-origin: 50% 50%;
+		perspective-origin: 50% 50%;
+	}
+	img {
+		margin: 5px;
+	}
+	.cube {
+		width: 90px;
+		height: 90px;
+		position: relative;
+		background-color: #DED1C1;
+		transition: transform 0.5s linear;
+		transform-style: preserve-3d;
+		box-sizing: border-box;
+	}
+	.card {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		backface-visibility: hidden;
+		box-sizing: border-box;
+		border: 1px solid #383838;
+		background-color: #DED1C1;
+		&:hover {
+			cursor: pointer;
+			background-color: complement(#926290);
+		}
+	}
+	.front {
+		transform: translateZ(45px);
+	}
+	.back {
+		transform: translateZ(-45px) rotateY(180deg);
+	}
+	.left {
+		transform: rotateY(-90deg) translateZ(45px);
+	}
+	.right {
+		transform: translateZ(-45px) rotateY(90deg);
+		transform-origin: right center;
+	}
+	.top {}
+	.bottom {}
+}
